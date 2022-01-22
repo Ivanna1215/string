@@ -71,11 +71,96 @@
 //     console.log (`found here : ${foundPos}`);
 //     pos = foundPos + 1; 
 // }
-let str = 'When do you start work?';
+// let str = 'When do you start work?';
 
-if (str.indexOf("When") !=-1){
-    console.log('found');
+// if (str.indexOf("When") !=-1){
+//     console.log('found');
+// }
+
+// console.log ('How do you like it?'.includes ('like') );
+// console.log (' When do you start run?'.includes ('work') );
+
+// substring,substr i slice
+// str.slice (start [,end]) Повертає частину строки від start не включаючи end.
+// let str = 'kitchen';
+// console.log (str.slice (0,4));
+// console.log (str.slice(-4,-2));
+
+// правильне порівняння
+// console.log ('Ivanna'.localeCompare ('work') );
+// console.log ('hall'.localeCompare('Freezer') );
+// console.log ('mirror'.localeCompare ('kettle') );
+
+// Task 1 Зробити перший символ великим
+function ucFirst (name) {
+let partOne = (name[0].toUpperCase ());
+// console.log (partOne);
+let  partTwo = (name.slice (1));
+// console.log (partTwo);
+let str = partOne + partTwo
+console.log (str);
 }
+ucFirst ('ivanna');
+
+// Коротке правильне рішення
+
+function ucFirst (str) {
+    if (!str) return str;
+    return str [0].toUpperCase()+str.slice(1);
+}
+console.log (ucFirst ('Ivanna'));
+
+// Перевірка на спам Task 2
+ function   checkSpam (strin) {
+     strin = strin.toLowerCase();
+if (strin === 'viagra' || strin ==='xxx') {
+    return true;
+} else {
+    return false;
+}
+}
+console.log (checkSpam ('xXx'));
+
+// Правильне коротке рішення
+function   checkSpam (lowStr) {
+   let lowerStr = lowStr.toLowerCase ();
+   return lowerStr.includes ('viagra') || lowerStr.includes ('xxx');
+}
+console.log (checkSpam ('xXx it is good'));
+
+// Усічення рядка Task 3
+
+function truncate (sTr,maxlength) {
+    let strLength = sTr.length;
+    if (strLength<maxlength){
+        return sTr;
+    } else {
+let newStr = sTr.slice(0,maxlength-1) + '...';
+        return  newStr;
+    }
+}
+console.log (truncate ('Ivanna',4));
+
+
+// Правильне коротке рішення
+
+function truncate(str, maxlength) {
+    return (str.length > maxlength) ? 
+      str.slice(0, maxlength - 1) + '…' : str;
+  }
+
+  console.log (truncate ('Iva',4));
+
+
+console.log ('Iva'.length)
+let newStr = 'Ivanna'.slice(0,4-2) + '...';
+console.log (newStr);
 
 
 
+
+
+// Регістр має значення
+// let text = 'Thursday';
+// let searchText = 'tH';
+// console.log (text.toLowerCase().includes(searchText.toLowerCase()));
