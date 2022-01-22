@@ -157,10 +157,14 @@ let newStr = 'Ivanna'.slice(0,4-2) + '...';
 console.log (newStr);
 
 
-
-
-
 // Регістр має значення
 // let text = 'Thursday';
 // let searchText = 'tH';
 // console.log (text.toLowerCase().includes(searchText.toLowerCase()));
+
+// Task 4
+
+function extractCurrencyValue (str) {
+return +str.slice(1);
+}
+console.log (extractCurrencyValue ('$120'));
